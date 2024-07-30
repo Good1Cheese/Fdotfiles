@@ -9,8 +9,6 @@ set functions ~/.config/fish/functions
 fish_add_path ~/.local/share/gem/ruby/3.1.0/bin
 fish_add_path /root/.local/share/gem/ruby/3.1.0/bin
 
-# any-nix-shell fish --info-right | source
-
 set -x VISUAL nvim
 # set -x EDITOR devour neovide --no-fork
 set -x EDITOR nvim
@@ -29,8 +27,6 @@ set -x DIRENV_LOG_FORMAT ""
 source $fish/aliases.fish
 source $fish/keymaps.fish
 
-source $functions/greeting.fish
-# source $functions/xorg_on_startup.fish
-source $functions/nvim_cfg_switcher.fish
-source $functions/lfcd.fish
-source $functions/yy.fish
+for f in ~/.config/fish/functions/*.fish
+	source $f
+end

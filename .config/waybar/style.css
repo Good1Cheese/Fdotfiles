@@ -141,8 +141,8 @@ window#waybar.hidden {
 }
 
 #cpu {
-    margin-right: 8px;
-    padding-left: 8px;
+    margin-right: 16px;
+    padding-left: 16px;
     padding-right: 8px;
     border-radius: 10px;
     transition: none;

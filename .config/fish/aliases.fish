@@ -1,28 +1,16 @@
-# alias cat="bat"
 alias lg="lazygit"
-# alias lf="bash -c ~/.config/lf/ueberzug/wrap"
-alias lf="lfcd"
 alias qq="nvim"
 alias qw="devour neovide --no-fork"
-# alias nvim="devour neovide --no-fork"
 alias ff="fastfetch"
-
-alias dudo="devour sudo"
 
 alias simplescreenrecorder="simplescreenrecorder --no-systray"
 alias qbittorrent="devour qbittorrent"
 alias mpv="devour mpv"
 
-alias rcd="~/Projects/ChinDin/bin/rails"
-alias rcb="~/Projects/ChinDin/bin/rails server"
-
-alias ser="nix search nixpkgs"
-alias tra="nix-collect-garbage -d"
-alias tri="~/dotfiles/.config/fish/functions/nix-trimmer-gen.sh"
-alias reb="sudo nixos-rebuild switch"
-alias fib="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
-
-alias sp="nix search nixpkgs"
+alias nsearch="nix search nixpkgs"
+alias ngarb="nix-collect-garbage -d"
+alias nflake="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
+alias nhome="home-manager switch --flake ~/min-nixos-cfg/"
 
 alias gsu="git submodule update --init --recursive"
 alias gsa="git submodule add"
@@ -33,4 +21,4 @@ alias unreal="exec /mnt/hdd/Linux_Unreal_Engine_5.3.2/Engine/Binaries/Linux/Unre
 alias knv="killall"
 alias std="shutdown now"
 alias ssp="systemctl suspend"
-alias reboot="sudo reboot"
+alias rbt="reboot"

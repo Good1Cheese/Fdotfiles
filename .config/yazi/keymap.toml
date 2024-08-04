@@ -156,7 +156,9 @@ keymap = [
   # Goto
   { on = ["<Space>", "~"], run = "cd ~" },
   { on = ["<Space>", "/"], run = "cd /" },
-  { on = ["<Space>", "c"], run = "cd ~/.config " },
+  { on = ["<Space>", "c"], run = "cd ~/.config" },
+  { on = ["<Space>", "o"], run = "cd ~/Personal" },
+  { on = ["<Space>", "L"], run = "cd ~/.local/share/nvim/lazy/" },
   # { on = ["<Space>", "n"], run = "cd ~/.config/nvim        && $EDITOR" },
   # { on = ["<Space>", "b"], run = "cd ~/new-nixos-cfg       && $EDITOR" },
   # { on = ["<Space>", "a"], run = "cd ~/.config/hypr		   && $EDITOR" },
@@ -166,8 +168,9 @@ keymap = [
   { on = ["<Space>", "l"], run = "cd ~/.config/yazi       " },
   { on = ["<Space>", "q"], run = "cd ~/.config/qutebrowser" },
   { on = ["<Space>", "n"], run = '''shell 'cd ~/.config/nvim            && $EDITOR' --block --confirm''' },
-  { on = ["<Space>", "b"], run = '''shell 'cd ~/new-nixos-cfg           && $EDITOR' --block --confirm''' },
+  { on = ["<Space>", "b"], run = '''shell 'cd ~/min-nixos-cfg           && $EDITOR' --block --confirm''' },
   { on = ["<Space>", "a"], run = '''shell 'cd ~/.config/hypr            && $EDITOR' --block --confirm''' },
+  { on = ["<Space>", "P"], run = "cd ~/Projects/codewars-relay" },
   { on = ["<Space>", "p"], run = '''shell 'cd ~/Projects/codewars-relay && $EDITOR' --block --confirm''' },
 
   { on = ["<Space>", "D"], run = "cd ~/Downloads" },

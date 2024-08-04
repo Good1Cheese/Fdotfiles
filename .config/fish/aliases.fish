@@ -20,7 +20,7 @@ alias ser="nix search nixpkgs"
 alias tra="nix-collect-garbage -d"
 alias tri="~/dotfiles/.config/fish/functions/nix-trimmer-gen.sh"
 alias reb="sudo nixos-rebuild switch"
-alias fib="sudo nixos-rebuild switch --flake ~/new-nixos-cfg/"
+alias fib="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
 
 alias sp="nix search nixpkgs"
 

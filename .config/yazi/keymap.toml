@@ -14,8 +14,10 @@ keymap = [
   { on = ["K"], run = "arrow -5", desc = "Move cursor up 5 lines" },
   { on = ["J"], run = "arrow 5", desc = "Move cursor down 5 lines" },
 
-  { on = ["<C-u>"], run = "arrow -50%", desc = "Move cursor up half page" },
-  { on = ["<C-d>"], run = "arrow 50%", desc = "Move cursor down half page" },
+  # { on = ["<C-u>"], run = "arrow -50%", desc = "Move cursor up half page" },
+  # { on = ["<C-d>"], run = "arrow 50%", desc = "Move cursor down half page" },
+  { on = ["<C-d>"], run = "plugin diff", desc = "Diff the selected with the hovered file" },
+
   { on = ["<C-b>"], run = "arrow -100%", desc = "Move cursor up one page" },
   { on = ["<C-f>"], run = "arrow 100%", desc = "Move cursor down one page" },
 
@@ -60,17 +62,16 @@ keymap = [
   { on = ["D"], run = ["remove --permanently", "escape --visual --select"], desc = "Permanently delete the files" },
   { on = ["a"], run = "create", desc = "Create a file or directory (ends with / for directories)" },
   { on = ["r"], run = "rename", desc = "Rename a file or directory" },
-  { on = [";"], run = "shell", desc = "Run a shell command" },
-  { on = [":"], run = "shell --block", desc = "Run a shell command (block the UI until the command finishes)" },
+  # { on = [";"], run = "shell", desc = "Run a shell command" },
+  # { on = [":"], run = "shell --block", desc = "Run a shell command (block the UI until the command finishes)" },
   { on = ["."], run = "hidden toggle", desc = "Toggle the visibility of hidden files" },
   { on = ["s"], run = "search fd", desc = "Search files by name using fd" },
   { on = ["S"], run = "search rg", desc = "Search files by content using ripgrep" },
-  { on = ["<C-s>"], run = "search none", desc = "Cancel the ongoing search" },
+  { on = ["<C-s>"], run = 'shell "$SHELL" --block --confirm', desc = "Open shell here" },
   { on = ["z"], run = "plugin fzf", desc = "Jump to a directory, or reveal a file using fzf" },
   { on = ["<C-t>"], run = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
 
   # Custom
-  { on = ["e"], run = '''shell '$EDITOR' --block --confirm''', desc = "Open nvim" },
   { on = ["U"], run = '''shell 'lazygit' --block --confirm''', desc = "Open lazygit" },
   { on = ["m"], run = "plugin bookmarks --args=save", desc = "Save current position as a bookmark" },
   { on = ["'"], run = "plugin bookmarks --args=jump", desc = "Jump to a bookmark" },
@@ -88,10 +89,7 @@ keymap = [
   { on = ["c", "t"], run = '''shell 'gtrash restore' --block --confirm''', desc = "Trash" },
   { on = ["c", "T"], run = '''shell 'gtrash restore-group' --block --confirm''', desc = "G TRASH" },
   { on = ["c", "Y"], run = '''shell 'trash-empty' --block --confirm''', desc = "EMPTY TRASH" },
-
-  # { on = ["c", "d"], run = "copy dirname", desc = "Copy the path of the parent directory" },
-  # { on = ["c", "f"], run = "copy filename", desc = "Copy the name of the file" },
-  # { on = ["c", "n"], run = "copy name_without_ext", desc = "Copy the name of the file without the extension" },
+  { on = ["c", "m"], run = "plugin chmod", desc = "Chmod on selected files" },
 
   # Archieve
   { on = ["A", "z"], run = '''shell 'zip archieve -jr "$@"' --block --confirm''', desc = "ZIP files" },
@@ -104,8 +102,8 @@ keymap = [
   { on = ["m", "n"], run = "linemode none", desc = "Set linemode to none" },
 
   # Find
-  { on = ["/"], run = "find --smart" },
-  { on = ["?"], run = "find --previous --smart" },
+  { on = ["/"], run = "plugin smart-filter" },
+  # { on = ["?"], run = "find --previous --smart" },
   { on = ["n"], run = "find_arrow" },
   { on = ["N"], run = "find_arrow --previous" },
 
@@ -123,6 +121,7 @@ keymap = [
 
   # Tabs
   { on = ["t"], run = "tab_create --current", desc = "Create a new tab using the current path" },
+  { on = ["T"], run = "plugin --sync max-preview", desc = "Maximize or restore preview" },
 
   { on = ["<A-1>"], run = "tab_switch 0", desc = "Switch to the first tab" },
   { on = ["<A-2>"], run = "tab_switch 1", desc = "Switch to the second tab" },
@@ -156,25 +155,24 @@ keymap = [
   # Goto
   { on = ["<Space>", "~"], run = "cd ~" },
   { on = ["<Space>", "/"], run = "cd /" },
+  { on = ["<Space>", "L"], run = "cd ~/.local/share/nvim/lazy/" },
+  { on = ["<Space>", "N"], run = "cd ~/.config/nvim" },
+  { on = ["<Space>", "P"], run = "cd ~/Projects/" },
+  { on = ["<Space>", "B"], run = "cd ~/min-nixos-cfg" },
+  { on = ["<Space>", "D"], run = "cd ~/Downloads" },
+  { on = ["<Space>", "d"], run = "cd ~/dotfiles" },
+  { on = ["<Space>", "w"], run = "cd ~/dotfiles/.config/waybar" },
+
   { on = ["<Space>", "c"], run = "cd ~/.config" },
   { on = ["<Space>", "o"], run = "cd ~/Personal" },
-  { on = ["<Space>", "L"], run = "cd ~/.local/share/nvim/lazy/" },
-  # { on = ["<Space>", "n"], run = "cd ~/.config/nvim        && $EDITOR" },
-  # { on = ["<Space>", "b"], run = "cd ~/new-nixos-cfg       && $EDITOR" },
-  # { on = ["<Space>", "a"], run = "cd ~/.config/hypr		   && $EDITOR" },
-  # { on = ["<Space>", "p"], run = "cd ~/Projects/codewars-relay && $EDITOR" },
-
   { on = ["<Space>", "f"], run = "cd ~/.config/fish       " },
   { on = ["<Space>", "l"], run = "cd ~/.config/yazi       " },
   { on = ["<Space>", "q"], run = "cd ~/.config/qutebrowser" },
+
   { on = ["<Space>", "n"], run = '''shell 'cd ~/.config/nvim            && $EDITOR' --block --confirm''' },
   { on = ["<Space>", "b"], run = '''shell 'cd ~/min-nixos-cfg           && $EDITOR' --block --confirm''' },
   { on = ["<Space>", "a"], run = '''shell 'cd ~/.config/hypr            && $EDITOR' --block --confirm''' },
-  { on = ["<Space>", "P"], run = "cd ~/Projects/codewars-relay" },
   { on = ["<Space>", "p"], run = '''shell 'cd ~/Projects/codewars-relay && $EDITOR' --block --confirm''' },
-
-  { on = ["<Space>", "D"], run = "cd ~/Downloads" },
-  { on = ["<Space>", "d"], run = "cd ~/dotfiles" },
 
   { on = ["<Space>", "<Space>"], run = "cd --interactive", desc = "Go to a directory interactively" },
 

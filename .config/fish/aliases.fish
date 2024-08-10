@@ -1,3 +1,4 @@
+alias cat="bat"
 alias lg="lazygit"
 alias qq="nvim"
 alias qw="devour neovide --no-fork"
@@ -10,6 +11,7 @@ alias mpv="devour mpv"
 alias nsearch="nix search nixpkgs"
 alias ngarb="nix-collect-garbage -d"
 alias nflake="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
+alias nflakeupt="sudo nix flake update"
 alias nhome="home-manager switch --flake ~/min-nixos-cfg/"
 
 alias gsu="git submodule update --init --recursive"

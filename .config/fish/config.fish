@@ -10,6 +10,8 @@ set -x EDITOR nvim
 source $fish/aliases.fish
 source $fish/keymaps.fish
 
+alias tomato="$functions/tomato.bash $argv"
+
 for f in ~/.config/fish/functions/*.fish
 	source $f
 end

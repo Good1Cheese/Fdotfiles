@@ -1,9 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetbrainsMono Nerd Font";
-    font-weight: bold; 
+    /* font-weight: bold;  */
     min-height: 20px;
 }
 
@@ -141,9 +140,9 @@ window#waybar.hidden {
 }
 
 #cpu {
-    margin-right: 16px;
     padding-left: 16px;
-    padding-right: 8px;
+	margin-right: 8px;
+    padding-right: 16px;
     border-radius: 10px;
     transition: none;
     color: #ffffff;
@@ -207,6 +206,7 @@ window#waybar.hidden {
 #tray {
     padding-left: 16px;
     padding-right: 16px;
+	margin-right: 8px;
     border-radius: 10px;
     transition: none;
     color: #ffffff;

@@ -9,7 +9,7 @@ function tomato
 
 	for i in $(seq 1 $min)
 		sleep 60
-		set rem min-i
+		set rem (math "$min-$i")
 		echo -ne "$rem minutes remaining\\r"
 	end
 

@@ -4,7 +4,6 @@ set fish ~/.config/fish
 set functions ~/.config/fish/functions
 
 set -x VISUAL nvim
-# set -x EDITOR devour neovide --no-fork
 set -x EDITOR nvim
 
 source $fish/aliases.fish

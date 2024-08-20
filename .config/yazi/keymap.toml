@@ -73,8 +73,8 @@ keymap = [
 
   # Custom
   { on = ["U"], run = '''shell 'lazygit' --block --confirm''', desc = "Open lazygit" },
-  { on = ["m"], run = "plugin bookmarks --args=save", desc = "Save current position as a bookmark" },
-  { on = ["'"], run = "plugin bookmarks --args=jump", desc = "Jump to a bookmark" },
+  # { on = ["m"], run = "plugin bookmarks --args=save", desc = "Save current position as a bookmark" },
+  # { on = ["'"], run = "plugin bookmarks --args=jump", desc = "Jump to a bookmark" },
   { on = ["B"], run = '''shell 'dragon -x -a "$@"' --confirm''', desc = "Open dragon" },
   { on = [ "b", "d" ], run = "plugin bookmarks --args=delete", desc = "Delete a bookmark" },
   { on = [ "b", "D" ], run = "plugin bookmarks --args=delete_all", desc = "Delete all bookmark" },
@@ -161,6 +161,7 @@ keymap = [
   { on = ["<Space>", "B"], run = "cd ~/min-nixos-cfg" },
   { on = ["<Space>", "D"], run = "cd ~/Downloads" },
   { on = ["<Space>", "d"], run = "cd ~/dotfiles" },
+  { on = ["<Space>", "r"], run = "cd /run/media/cheese/ASC-FM" },
   { on = ["<Space>", "w"], run = "cd ~/dotfiles/.config/waybar" },
 
   { on = ["<Space>", "c"], run = "cd ~/.config" },
@@ -174,8 +175,8 @@ keymap = [
   { on = ["<Space>", "n"], run = '''shell 'cd ~/.config/nvim            && $EDITOR' --block --confirm''' },
   { on = ["<Space>", "b"], run = '''shell 'cd ~/min-nixos-cfg           && $EDITOR' --block --confirm''' },
 
-  { on = ["<Space>", "1"], run = '''shell 'cd ~/Projects/codewars-relay && $EDITOR' --block --confirm''' },
-  { on = ["<Space>", "2"], run = "cd ~/Projects/disasm/IOLI-crackme/bin-linux" },
+  { on = ["<Space>", "1"], run = "cd ~/Projects/disasm/IOLI-crackme/bin-linux" },
+  { on = ["<Space>", "2"], run = "cd ~/Projects/c-lang" },
 
   { on = ["<Space>", "<Space>"], run = "cd --interactive", desc = "Go to a directory interactively" },
 

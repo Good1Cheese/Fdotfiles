@@ -12,12 +12,6 @@ c.aliases = {
     "h": "help",
 }
 
-# c.url.default_page = "file:///home/cheese/dotfiles/.config/qutebrowser/homepage.html"
-# c.url.start_pages = "file:///home/cheese/dotfiles/.config/qutebrowser/homepage.html"
-
-# proxy_current = 'http://DXf2sxr5:2EVysff7@103.163.53.91:64692/'
-# c.content.proxy = proxy_current
-
 c.confirm_quit = ["downloads"]
 
 c.new_instance_open_target = "tab-silent"

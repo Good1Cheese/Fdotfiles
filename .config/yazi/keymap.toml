@@ -161,6 +161,7 @@ keymap = [
   { on = ["<Space>", "B"], run = "cd ~/min-nixos-cfg" },
   { on = ["<Space>", "D"], run = "cd ~/Downloads" },
   { on = ["<Space>", "d"], run = "cd ~/dotfiles" },
+  { on = ["<Space>", "t"], run = "cd ~/.local/share/Trash/files" },
   { on = ["<Space>", "r"], run = "cd /run/media/cheese/ASC-FM" },
   { on = ["<Space>", "w"], run = "cd ~/dotfiles/.config/waybar" },
 

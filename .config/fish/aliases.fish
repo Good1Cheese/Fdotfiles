@@ -3,6 +3,8 @@ alias lg="lazygit"
 alias qq="nvim"
 alias ff="fastfetch"
 
+alias rizz="rizin -c 'aa ; s main ; VV'"
+
 alias nsearch="nix search nixpkgs"
 alias ngarb="nix-collect-garbage -d"
 alias nflake="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"

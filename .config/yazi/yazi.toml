@@ -29,30 +29,31 @@ edit = [
   # editor
   { run = '$EDITOR "$@"', block = true, for = "unix" },
   { run = 'nvim "$@"', block = true, for = "unix" },
-  { run = 'librewolf "$1"', block = true, for = "unix" },
-  { run = 'code "%*"', orphan = true, for = "windows" },
+  { run = 'qutebrowser "$1"', block = true, for = "unix" },
 ]
 open = [
   # system app
-  { run = 'devour xdg-open "$@"', desc = "Open", for = "linux" },
+  { run = 'xdg-open "$1"', desc = "Open", for = "linux" },
   { run = 'open "$@"', desc = "Open", for = "macos" },
   { run = 'start "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 reveal = [
   # reveal
-  { run = 'open -R "$1"', desc = "Reveal", for = "macos" },
-  { run = 'explorer /select,%1', orphan = true, desc = "Reveal", for = "windows" },
+  { run = 'steam-run bash -c rizin -c "aa ; s main ; VV" "$1"', block = true, desc = "SRB + Open in Rizin", for = "unix" },
+  { run = 'steam-run bash -c cutter "$1"', block = true, desc = "SRB + Open in Cutter", for = "unix" },
+  { run = 'rizin -c "aa ; s main ; VV" "$1"', block = true, desc = "Open in Rizin", for = "unix" },
+  { run = 'cutter "$1"', block = true, desc = "Open in Cutter", for = "unix" },
+  { run = 'cutter "$1"', block = true, desc = "Open in Rizin", for = "unix" },
   { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
+  { run = 'libreoffice "$1"', block = true, desc = "Open in Libreoffice", for = "unix" },
 ]
 extract = [
   # extract
   { run = 'atool -x "$1"', desc = "Extract here", for = "unix" },
-  { run = 'atool -x "%1"', desc = "Extract here", for = "windows" },
 ]
 play = [
   # media
-  { run = 'devour mpv "$@"', orphan = true, for = "unix" },
-  { run = 'mpv "%1"', orphan = true, for = "windows" },
+  { run = 'mpv "$@"', orphan = true, for = "unix" },
   { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
 ]
 

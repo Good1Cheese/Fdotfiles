@@ -73,6 +73,7 @@ keymap = [
 
   # Custom
   { on = ["U"], run = '''shell 'lazygit' --block --confirm''', desc = "Open lazygit" },
+  { on = ["e"], run = '''shell '$EDITOR .' --block --confirm''', desc = "Open Editor" },
   # { on = ["m"], run = "plugin bookmarks --args=save", desc = "Save current position as a bookmark" },
   # { on = ["'"], run = "plugin bookmarks --args=jump", desc = "Jump to a bookmark" },
   { on = ["B"], run = '''shell 'dragon -x -a "$@"' --confirm''', desc = "Open dragon" },
@@ -84,7 +85,7 @@ keymap = [
   { on = ["c", "B"], run = '''shell 'bluetuith' --block --confirm''', desc = "BLUETOOTH" },
   { on = ["c", "n"], run = '''shell 'ncdu --color dark --exclude /mnt/' --block --confirm''', desc = "NCDU" },
   { on = ["c", "w"], run = '''shell 'wine "$1"' --block --confirm''', desc = "Wine" },
-  { on = ["c", "W"], run = '''shell 'echo xwallpaper --zoom "$1" > ~/.config/awesome/scripts/wallpaper.sh && exec ~/.config/awesome/scripts/wallpaper.sh' --confirm''', desc = "Change wallpapers" },
+  { on = ["c", "W"], run = '''shell 'echo exec = swaybg -i "$1" > /home/cheese/.config/hypr/wallpaper.conf' --confirm''', desc = "Change wallpapers" },
   { on = ["c", "d"], run = '''shell 'dust' --block --confirm''', desc = "DUST" },
   { on = ["c", "t"], run = '''shell 'gtrash restore' --block --confirm''', desc = "Trash" },
   { on = ["c", "T"], run = '''shell 'gtrash restore-group' --block --confirm''', desc = "G TRASH" },
@@ -160,7 +161,7 @@ keymap = [
   { on = ["<Space>", "P"], run = "cd ~/Projects/" },
   { on = ["<Space>", "B"], run = "cd ~/min-nixos-cfg" },
   { on = ["<Space>", "D"], run = "cd ~/Downloads" },
-  { on = ["<Space>", "d"], run = "cd ~/dotfiles" },
+  { on = ["<Space>", "d"], run = "cd ~/Fdotfiles" },
   { on = ["<Space>", "t"], run = "cd ~/.local/share/Trash/files" },
   { on = ["<Space>", "r"], run = "cd /run/media/cheese/ASC-FM" },
   { on = ["<Space>", "w"], run = "cd ~/dotfiles/.config/waybar" },

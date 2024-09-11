@@ -3,7 +3,6 @@
 # Set current layout to US if Yazi is focused
 
 while true; do
-	prev=$window
 	window=$(hyprctl activewindow | awk -F ':' '/title/ {print $2}')
 
 	if [ "$(echo "$window" | awk "/Yazi/")" ]; then

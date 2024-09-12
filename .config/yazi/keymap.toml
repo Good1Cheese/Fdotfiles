@@ -14,9 +14,9 @@ keymap = [
   { on = ["K"], run = "arrow -5", desc = "Move cursor up 5 lines" },
   { on = ["J"], run = "arrow 5", desc = "Move cursor down 5 lines" },
 
-  # { on = ["<C-u>"], run = "arrow -50%", desc = "Move cursor up half page" },
-  # { on = ["<C-d>"], run = "arrow 50%", desc = "Move cursor down half page" },
-  { on = ["<C-d>"], run = "plugin diff", desc = "Diff the selected with the hovered file" },
+  { on = ["<C-u>"], run = "arrow -50%", desc = "Move cursor up half page" },
+  { on = ["<C-d>"], run = "arrow 50%", desc = "Move cursor down half page" },
+  # { on = ["<C-d>"], run = "plugin diff", desc = "Diff the selected with the hovered file" },
 
   { on = ["<C-b>"], run = "arrow -100%", desc = "Move cursor up one page" },
   { on = ["<C-f>"], run = "arrow 100%", desc = "Move cursor down one page" },

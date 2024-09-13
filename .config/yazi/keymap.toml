@@ -165,6 +165,7 @@ keymap = [
   { on = ["<Space>", "t"], run = "cd ~/.local/share/Trash/files" },
   { on = ["<Space>", "r"], run = "cd /run/media/cheese/ASC-FM" },
   { on = ["<Space>", "w"], run = "cd ~/dotfiles/.config/waybar" },
+  { on = ["<Space>", "W"], run = "cd ~/Work" },
 
   { on = ["<Space>", "c"], run = "cd ~/.config" },
   { on = ["<Space>", "o"], run = "cd ~/Personal" },

@@ -83,7 +83,7 @@ keymap = [
   { on = ["c", "c"], run = "copy path", desc = "Copy the absolute path" },
   { on = ["c", "b"], run = '''shell 'btop' --block --confirm''', desc = "BTOP" },
   { on = ["c", "B"], run = '''shell 'bluetuith' --block --confirm''', desc = "BLUETOOTH" },
-  { on = ["c", "n"], run = '''shell 'ncdu --color dark --exclude /mnt/' --block --confirm''', desc = "NCDU" },
+  { on = ["c", "n"], run = '''shell 'gdu -i /mnt/hdd' --block --confirm''', desc = "GDU" },
   { on = ["c", "w"], run = '''shell 'wine "$1"' --block --confirm''', desc = "Wine" },
   { on = ["c", "W"], run = '''shell 'echo exec = swaybg -i "$1" > /home/cheese/.config/hypr/wallpaper.conf' --confirm''', desc = "Change wallpapers" },
   { on = ["c", "d"], run = '''shell 'dust' --block --confirm''', desc = "DUST" },

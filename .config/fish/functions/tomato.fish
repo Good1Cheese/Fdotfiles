@@ -1,6 +1,6 @@
 function tomato
 	if [ -z "$argv" ]
-		set min 25
+		set min 45
 	else
 		set min $argv
 	end

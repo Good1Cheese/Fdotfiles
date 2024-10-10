@@ -27,7 +27,9 @@ ueberzug_offset = [0, 0, 0, 0]
 [opener]
 edit = [
   # editor
+  { run = 'nvim -d "$@"', desc = "nvim diff", block = true, for = "unix" },
   { run = '$EDITOR "$@"', block = true, for = "unix" },
+  { run = 'libreoffice "$1"', block = true, desc = "Open in Libreoffice", for = "unix" },
   { run = 'nvim "$@"', block = true, for = "unix" },
   { run = 'qutebrowser "$1"', block = true, for = "unix" },
 ]
@@ -39,13 +41,13 @@ open = [
 ]
 reveal = [
   # reveal
+  { run = 'libreoffice "$1"', block = true, desc = "Open in Libreoffice", for = "unix" },
   { run = 'steam-run bash -c rizin -c "aa ; s main ; VV" "$1"', block = true, desc = "SRB + Open in Rizin", for = "unix" },
   { run = 'steam-run bash -c cutter "$1"', block = true, desc = "SRB + Open in Cutter", for = "unix" },
   { run = 'rizin -c "aa ; s main ; VV" "$1"', block = true, desc = "Open in Rizin", for = "unix" },
   { run = 'cutter "$1"', block = true, desc = "Open in Cutter", for = "unix" },
   { run = 'cutter "$1"', block = true, desc = "Open in Rizin", for = "unix" },
   { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
-  { run = 'libreoffice "$1"', block = true, desc = "Open in Libreoffice", for = "unix" },
 ]
 extract = [
   # extract

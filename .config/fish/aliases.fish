@@ -1,13 +1,19 @@
 alias cat="bat"
 alias lg="lazygit"
+alias ld="lazydocker"
 alias qq="nvim"
 alias ff="fastfetch"
 
+alias docker_delete_all="docker rm $(docker ps -a -q)"
+alias n_direnv_init='touch .envrc && echo "use flake" >> .envrc && direnv allow'
+
 alias rizz="rizin -c 'aa ; s main ; VV'"
 
-alias nsearch="nix search nixpkgs"
+alias libre_convert="libreoffice --headless --convert-to"
+
 alias ngarb="nix-collect-garbage -d"
 alias nflake="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
+alias nsrc="nix search nixpkgs"
 alias nflakeupt="sudo nix flake update"
 alias nhome="home-manager switch --flake ~/min-nixos-cfg/"
 

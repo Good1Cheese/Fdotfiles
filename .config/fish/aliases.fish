@@ -23,6 +23,8 @@ alias gsa="git submodule add"
 alias srb="steam-run bash"
 alias unreal="exec /mnt/hdd/Linux_Unreal_Engine_5.3.2/Engine/Binaries/Linux/UnrealEditor"
 
+alias web_camera="scrcpy --video-source=camera --camera-size=1920x1080 --camera-facing=front --v4l2-sink=/dev/video0 --no-playback"
+
 alias knv="killall"
 alias std="shutdown now"
 alias ssp="systemctl suspend"

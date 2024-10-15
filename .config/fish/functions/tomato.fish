@@ -1,4 +1,4 @@
-function tomato
+function tmt
 	if [ -z "$argv" ]
 		set min 45
 	else

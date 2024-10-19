@@ -41,6 +41,7 @@ open = [
 ]
 reveal = [
   # reveal
+  { run = 'xdg-open "$1"', desc = "Open", for = "linux" },
   { run = 'libreoffice "$1"', block = true, desc = "Open in Libreoffice", for = "unix" },
   { run = 'steam-run bash -c rizin -c "aa ; s main ; VV" "$1"', block = true, desc = "SRB + Open in Rizin", for = "unix" },
   { run = 'steam-run bash -c cutter "$1"', block = true, desc = "SRB + Open in Cutter", for = "unix" },

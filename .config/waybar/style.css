@@ -6,6 +6,10 @@
     min-height: 20px;
 }
 
+#custom-uair.resumed {
+  color: #f87171;
+}
+
 window#waybar {
     background: transparent;
 }

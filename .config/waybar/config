@@ -1,7 +1,7 @@
 {
 	"margin": "9 13 -10 18",
 	"layer": "top",
-	"modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/submap"],
+	"modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/submap", "custom/uair" ],
 	"modules-right": ["pulseaudio", "cpu", "custom/mem", "backlight", "battery", "tray", "clock"],
 
 	"hyprland/language": {
@@ -79,17 +79,34 @@
 		"tooltip": false,
 	},
 
-	"custom/media": {
-		"interval": 30,
-		"format": "{icon} {}",
-		"return-type": "json",
-		"max-length": 20,
-		"format-icons": {
-			"spotify": " ",
-			"default": " "
-		},
-		"escape": true,
-		"exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-		"on-click": "playerctl play-pause"
+	"custom/mem": {
+		"format": " {}",
+		"interval": 3,
+		"exec": "free -h | awk '/Mem:/{printf $3}'",
+		"tooltip": false,
 	},
+
+	"custom/uair": {
+		"format": "{icon} {}",
+		"format-icons": [
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		""
+		],
+		"tooltip": false,
+		"return-type": "json",
+		"interval": 5,
+		"on-click": "uairctl toggle",
+		"on-click-middle": "uairctl prev",
+		"on-click-right": "uairctl next",
+		"exec-if": "which uairctl",
+		"exec": "uairctl fetch '{\"text\":\"{name} {time} {percent}%\",\"class\":\"{state}\",\"percentage\":{percent}}'"
+	}
 }

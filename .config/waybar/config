@@ -102,7 +102,7 @@
 		],
 		"tooltip": false,
 		"return-type": "json",
-		"interval": 5,
+		"interval": 1,
 		"on-click": "uairctl toggle",
 		"on-click-middle": "uairctl prev",
 		"on-click-right": "uairctl next",

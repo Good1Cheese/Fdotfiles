@@ -9,18 +9,25 @@ id = "quick"
 name = "Quick"
 duration = "15m"
 time_format = "%M:%S"
-command = "notify-send 'Quick Done!'"
+command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Quick Done!'"
+
+[[sessions]]
+id = "quick-2"
+name = "Quake"
+duration = "5m"
+time_format = "%M:%S"
+command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Quick Done!'"
 
 [[sessions]]
 id = "work"
 name = "Work"
 duration = "52m"
 time_format = "%M:%S"
-command = "notify-send 'Work Done!'"
+command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Work Done!'"
 
 [[sessions]]
 id = "rest"
 name = "Rest"
 duration = "17m"
 time_format = "%M:%S"
-command = "notify-send 'Rest Done!'"
+command = "espeak -g 10 -v de 'Zur Arbeit, Schnell!' && notify-send 'Rest Done!'"

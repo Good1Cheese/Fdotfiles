@@ -160,6 +160,7 @@ keymap = [
   { on = ["<Space>", "N"], run = "cd ~/.config/nvim" },
   { on = ["<Space>", "m"], run = "cd ~/Memes" },
   { on = ["<Space>", "p"], run = "cd ~/Projects/" },
+  { on = ["<Space>", "g"], run = "cd ~/Games/" },
   { on = ["<Space>", "P"], run = "cd ~/phone" },
   { on = ["<Space>", "B"], run = "cd ~/min-nixos-cfg" },
   { on = ["<Space>", "L"], run = "cd ~/.local/share/nvim/lazy/" },

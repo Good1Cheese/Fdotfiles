@@ -6,15 +6,22 @@ resumed_state_text = "resumed"
 
 [[sessions]]
 id = "quick"
-name = "Quick"
-duration = "15m"
+name = "OKay"
+duration = "30m"
 time_format = "%M:%S"
 command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Quick Done!'"
 
 [[sessions]]
-id = "quick-2"
+id = "quick-4"
+name = "SIAAAA"
+duration = "40m"
+time_format = "%M:%S"
+command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Quick Done!'"
+
+[[sessions]]
+id = "quick-3"
 name = "Quake"
-duration = "5m"
+duration = "10m"
 time_format = "%M:%S"
 command = "espeak -g 10 -v de 'Achtung! Die Zeit ist zu Ende!' && notify-send 'Quick Done!'"
 

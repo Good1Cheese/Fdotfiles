@@ -12,7 +12,7 @@ alias rizz="rizin -c 'aa ; s main ; VV'"
 alias libre_convert="libreoffice --headless --convert-to"
 
 alias ngarb="nix-collect-garbage -d"
-alias nflake="sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
+alias nflake="git add . && sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
 alias nsrc="nix search nixpkgs"
 alias nflakeupt="sudo nix flake update"
 alias nhome="home-manager switch --flake ~/min-nixos-cfg/"

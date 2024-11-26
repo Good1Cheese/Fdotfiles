@@ -1,0 +1,112 @@
+{
+	"margin": "9 13 -10 18",
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/submap", "custom/uair" ],
+	"modules-right": ["pulseaudio", "cpu", "custom/mem", "backlight", "battery", "tray", "clock"],
+
+	"hyprland/language": {
+		"format-en": "US",
+		"format-ru": "RU",
+		"min-length": 5
+	},
+
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"reverse-scrolling": 1,
+		"format": "{icon} {volume}% {format_source}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"default": ["", "", " "]
+		},
+		"on-click": "pavucontrol",
+		"min-length": 13
+	},
+
+	"hyprland/workspaces": {
+		"disable-scroll": true
+	},
+
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15,
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "{capacity}% ",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+	},
+
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": "󰸘 {:%d/%m/%Y %H:%M %p}"
+	},
+
+	"cpu": {
+		"interval": 15,
+		"on-click": "foot btop",
+		"interval": 2,
+		"format": "  {usage}%",
+		"min-length": 6,
+	},
+
+	"custom/mem": {
+		"format": " {}",
+		"interval": 3,
+		"exec": "free -h | awk '/Mem:/{printf $3}'",
+		"tooltip": false,
+	},
+
+	"custom/mem": {
+		"format": " {}",
+		"interval": 3,
+		"exec": "free -h | awk '/Mem:/{printf $3}'",
+		"tooltip": false,
+	},
+
+	"custom/uair": {
+		"format": "{icon} {}",
+		"format-icons": [
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		""
+		],
+		"tooltip": false,
+		"return-type": "json",
+		"interval": 1,
+		"on-click": "uairctl toggle",
+		"on-click-middle": "uairctl prev",
+		"on-click-right": "uairctl next",
+		"exec-if": "which uairctl",
+		"exec": "uairctl fetch '{\"text\":\"{name} {time} {percent}%\",\"class\":\"{state}\",\"percentage\":{percent}}'"
+	}
+}

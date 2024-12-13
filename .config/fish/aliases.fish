@@ -9,13 +9,16 @@ alias ndirenvinit='cp ~/.config/fish/example-flake.nix . && touch .envrc && echo
 
 alias rizz="rizin -c 'aa ; s main ; VV'"
 
+alias zap="systemctl start zapret"
+alias uzap="systemctl stop zapret"
+
 alias libre_convert="libreoffice --headless --convert-to"
 
-alias ngarb="nix-collect-garbage -d"
-alias nflake="git add . && sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
-alias nsrc="nix search nixpkgs"
-alias nflakeupt="sudo nix flake update"
-alias nhome="home-manager switch --flake ~/min-nixos-cfg/"
+alias qgarb="nix-collect-garbage -d"
+alias qflake="cd ~/min-nixos-cfg/ && git add . && sudo nixos-rebuild switch --flake ~/min-nixos-cfg/"
+alias qsrc="nix search nixpkgs"
+alias qflakeupt="sudo nix flake update"
+alias qhome="home-manager switch --flake ~/min-nixos-cfg/"
 
 alias gsu="git submodule update --init --recursive"
 alias gsa="git submodule add"

@@ -9,8 +9,8 @@ alias ndirenvinit='cp ~/.config/fish/example-flake.nix . && touch .envrc && echo
 
 alias rizz="rizin -c 'aa ; s main ; VV'"
 
-alias zap="systemctl start zapret"
-alias uzap="systemctl stop zapret"
+alias usap="systemctl start zapret"
+alias sap="systemctl stop zapret"
 
 alias libre_convert="libreoffice --headless --convert-to"
 

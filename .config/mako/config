@@ -25,8 +25,8 @@ default-timeout=0
 border-color=#37e514
 default-timeout=60000
 group-by=category
-My Sway Keybindings to dismiss notifications are:
+# My Sway Keybindings to dismiss notifications are:
 
 # Notifications
-bindsym Control+Space       exec makoctl dismiss
-bindsym Control+Shift+Space exec makoctl dismiss --all
+# bindsym Control+Space       exec makoctl dismiss
+# bindsym Control+Shift+Space exec makoctl dismiss --all
